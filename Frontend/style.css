@@ -149,3 +149,121 @@ body{
 .container.toggle .welcome-sign-up{
     transform: translateX(-100%);
 }
+
+
+/*Buscar y reservar*/
+#search_button{
+    cursor: pointer;
+    height: 40px;
+    width: 80px;
+    background-color: #01553D;
+    border-radius: 10px;
+    color: whitesmoke;
+    border: 1px solid #01553D;
+    font-weight: bold;
+}
+
+#search_button:hover{
+    background-color: #1fb25e;
+}
+
+.opcionesFiltro {
+    display: none;
+    position: fixed;
+    top: 65%;
+    left: 38%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(240, 238, 238);
+    padding: 20px;
+    border: 1px solid #dbd9d9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    transition: all 0.3s ease; 
+    border-radius: 10px;
+}
+
+.mostrar {
+    display: block !important;
+    margin-top: 30px;
+}
+
+.searchcar{
+    border:1px solid rgba(26, 26, 26, 0.251);
+    padding: 40px;
+    border-radius: 20px;
+    display: block;
+    background-color: rgba(245, 245, 245, 0.244);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.135)
+}
+
+input{
+    border:1px solid rgba(0, 0, 0, 0.126);
+    border-radius: 5px;
+    height: 40px;
+    padding-left: 20px; 
+}
+
+select{
+    border:1px solid rgba(0, 0, 0, 0.126);
+    border-radius: 6px;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    height: 25px; 
+    width: 110px;
+}
+
+#city{
+   width: 300px;
+   background-image:url(pin-de-ubicacion.png) ;
+   background-size: 20px;
+   background-repeat: no-repeat; 
+   background-position: 270px;
+}
+#time{
+    cursor: pointer; 
+    width: 150px;
+    background-image:url(24-horas.png) ;
+    background-size: 22px;
+    background-repeat: no-repeat; 
+    background-position: 120px;
+}
+
+#fecha{
+   cursor: pointer; 
+   background-image:url(febrero.png) ;
+   background-size: 20px;
+   background-repeat: no-repeat; 
+   background-position: 170px;
+   width:200px;
+}
+
+.search-results{
+    display: none;
+    margin-top: 30px;
+    padding: 30px
+}
+
+#filter_apply{
+    cursor: pointer; 
+    background-color: #2b574a;
+    color: whitesmoke;
+    padding: 5px;
+    border-radius: 8px;  
+    width: 110px;
+}
+
+#filter_apply:hover{
+    background-color: #1fb25e;
+}
+
+#filtroBtn img{
+    height: 30px;
+    width: 30px;
+}
+
+#filtroBtn{
+    cursor: pointer;  
+    border-radius: 6px;
+    border:1px solid rgba(0, 0, 0, 0.112);
+    padding: 5px;
+}

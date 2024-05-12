@@ -24,7 +24,7 @@ function authenticateUser(username, password) {
     if (user) {
         // Si el usuario es encontrado, la autenticación es exitosa
         // Redirigir a la página de reservas
-        window.location.href = "/reservas.html";
+        window.location.href = "reservas.html";
     } else {
         // Si el usuario no es encontrado, mostrar un mensaje de error
         alert("Credenciales incorrectas. Por favor, inténtalo de nuevo.");

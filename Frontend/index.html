@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RentACar</title>
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
@@ -14,11 +14,11 @@
                 <span>Ingrese su correo y contraseña</span>
                 <div class="container-input">
                     <ion-icon name="mail-outline"></ion-icon>
-                    <input type="text" id="username" placeholder="Usuario">
+                    <input type="text" id="username" placeholder="Usuario" autocomplete="off">
                 </div>
                 <div class="container-input">
                     <ion-icon name="lock-closed-outline"></ion-icon>
-                    <input type="password" id="password" placeholder="Password">
+                    <input type="password" id="password" placeholder="Password" autocomplete="off">
                 </div>
                 <button class="button" id="btn-iniciar">INICIAR SESIÓN</button>
             </form>
@@ -29,15 +29,15 @@
                 <span>Use su correo electrónico para registrarse</span>
                 <div class="container-input">
                     <ion-icon name="person-outline"></ion-icon>
-                    <input type="text" placeholder="Nombre">
+                    <input input id="user_name" type="text" placeholder="Nombre">
                 </div>
                 <div class="container-input">
                     <ion-icon name="mail-outline"></ion-icon>
-                    <input type="text" placeholder="Email">
+                    <input id="user_email" type="text" placeholder="Email">
                 </div>
                 <div class="container-input">
                     <ion-icon name="lock-closed-outline"></ion-icon>
-                    <input type="password" placeholder="Password">
+                    <input input id="user_password" type="password" placeholder="Password">
                 </div>
                 <button class="button" >REGISTRARSE</button>
             </form>
@@ -59,7 +59,7 @@
     </div>
 
 
-    <script src="/script.js"></script>
+    <script src="script.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>

@@ -1,3 +1,7 @@
+const container = document.querySelector(".container");
+const btnSignIn = document.getElementById("btn-sign-in");
+const btnSignUp = document.getElementById("btn-sign-up");
+
 // Event listener para el botón de iniciar sesión
 document.getElementById("btn-iniciar").addEventListener("click", function(event) {
     event.preventDefault(); // Evitar envío del formulario
@@ -8,6 +12,14 @@ document.getElementById("btn-iniciar").addEventListener("click", function(event)
 
     // Llamar a la función de autenticación con los datos ingresados por el usuario
     authenticateUser(username, password);
+});
+
+
+btnSignIn.addEventListener("click",()=>{
+container.classList.remove("toggle");
+});
+btnSignUp.addEventListener("click",()=>{
+container.classList.add("toggle");
 });
 
 // Función para autenticar al usuario

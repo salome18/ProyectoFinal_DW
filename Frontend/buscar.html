@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Buscar - LuxuryWheels</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="../img/Mountain.png" alt="Logo de la marca">
+        </div>
+        <nav>
+           <ul class="nav-links">
+                <li><a href="#" class="active">Buscar</a></li>
+                <li><a href="reservas.html">Reservar</a></li>
+           </ul>
+        </nav>
+        <a class="btn" href="#"><ion-icon name="bag-check-outline"></ion-icon></a>
+    </header>
+    <main>
+        <section id="current-reservations">
+            <ul id="reservation-list">
+                <!-- Aquí se mostrarán las reservas actuales -->
+            </ul>
+        </section>
+        <section id="new-reservation">
+            <div class="searchcar">
+                <h2 style="margin-bottom: 30px;">Haz tu reserva aquí</h2>
+                <!-- Formulario de búsqueda de automóviles disponibles -->
+                <form id="search-form">
+                    <div class="search_bar">
+                        <input id="city" name="city" type="text" placeholder="Ciudad" spellcheck="false">
+                        <input id="fecha" name="fecha" placeholder="Selecciona la fecha" autocomplete="off">
+                        <input id="time" name="time" placeholder="Hora" autocomplete="off">
+                        <button id="search_button"type="submit">Buscar</button>
+                    </div>
+                </form>
+            </div>
+            
+               
+            <div class="search-results">
+                <p style="font-size: 18px;  margin-bottom: 30px; margin-left: 150px;">¡Estos son los autos que tenemos disponibles para ti!</p>
+                <button id="filtroBtn"><img src="Images/filtrar.png"/></button>
+                    <div id="opcionesFiltro" class="opcionesFiltro">
+                        <form id="filtroForm">
+                            <div class="filter" id="filtroMarca">
+                                <label for="brand">Marca:<br></label>
+                                <select name="brand" id="brand">
+                                    <option value="Audi">Audi</option>
+                                    <option value="Mercedez">Mercedez</option>
+                                    <option value="Mazda">Mazda</option>
+                                    <option value="Nissan">Nissan</option>
+                                    <option value="BMW">BMW</option>
+                                </select>
+                            </div>
+                            <div class="filter" id="filtroCombustible">
+                                <label for="fuel">Combustible: <br></label>
+                                <select name="fuel" id="fuel">
+                                    <option value="hybrid">Híbrido</option>
+                                    <option value="Gas">Gasolina</option>
+                                    <option value="Electric">Eléctrico</option>
+                                </select>
+                            </div>
+                            <div class="filter" id="filtroTransmision">
+                                <label for="transmission">Transmisión:<br></label>
+                                <select name="transmission" id="transmission">
+                                    <option value="Manual">Manual</option>
+                                    <option value="Automatic">Automático</option>
+                                </select>
+                            </div>
+                            <div class="filter" id="filtroTipo">
+                                <label for="type">Carrocería:<br></label>
+                                <select name="type" id="type">
+                                    <option value="SUV">SUV</option>
+                                    <option value="Sedan">Sedan</option>
+                                </select>
+                            </div>
+                            <button id="filter_apply"type="submit">Aplicar filtros</button>
+                        </form>
+                    </div>
+                    <div class="available_car">
+                        <!--Div para agregar los carros disponibles-->
+                    </div>
+                </div>
+        </section>
+    </main>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.0.1/css/ionicons.min.css">
+
+
+    <script src="scriptbuscar.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

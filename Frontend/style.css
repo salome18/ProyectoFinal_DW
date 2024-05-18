@@ -335,3 +335,57 @@ select{
     transition: all 0.3s ease 0s;
     color: #78de1f;
 }
+
+/*-------------------INICIO DE LAS CARDS DE LOS CARROS---------------------*/
+.Cards-cars{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    gap:1rem;
+    margin-top: 2rem;
+    padding-left: 20px;
+
+}
+.Cards-cars .box{
+    padding: 10px;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgb(0, 0,0,0.3);
+}
+
+.Cards-cars .box .box-img{
+    width: 100%;
+    height: 200px;
+
+}
+
+.Cards-cars .box .box-img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    object-fit: cover;
+    object-position: center;
+}
+
+.Cards-cars .box p{
+    padding: 0 10px;
+    border: 1px;
+    width: 58px;
+    border-radius: 0.5rem;
+    margin: 1rem 0 1rem;
+}
+.Cards-cars .box h3 {
+    font-weight: 500;
+}
+.Cards-cars .box h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0.2rem 0 0.5rem;
+}
+.Cards-cars .box .btn {
+    display: flex;
+    justify-content: center;
+    background: #01602A;
+    color: #fff;
+    padding: 10px;
+    border-radius: 0.5rem;
+}
+/*-------------------FIN DE LAS CARDS DE LOS CARROS---------------------*/

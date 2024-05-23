@@ -338,11 +338,12 @@ select{
 
 /*-------------------INICIO DE LAS CARDS DE LOS CARROS---------------------*/
 .Cards-cars{
-    display: grid;
+    display: inline;
     grid-template-columns: repeat(auto-fit, minmax(300px, auto));
     gap:1rem;
     margin-top: 2rem;
     padding-left: 20px;
+    
 
 }
 .Cards-cars .box{

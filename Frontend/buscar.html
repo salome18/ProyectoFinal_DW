@@ -18,7 +18,18 @@
                 <li><a href="reservas.html">Reservar</a></li>
            </ul>
         </nav>
-        <a class="btn" href="#"><ion-icon name="bag-check-outline"></ion-icon></a>
+        <div class="dropdown">
+            <a class="btn"><ion-icon name="bag-check-outline"></ion-icon></a>
+            <div class="dropdown-content">
+                <div class="cart-items">
+                    <!-- Los elementos del carrito se agregarán aquí -->
+                </div>
+                <div class="cart-total">
+                    <strong>Total:</strong> $<span id="cart-total">0.00</span>
+                </div>
+                <a href="#" class="btn-checkout">Aceptar</a>
+            </div>
+        </div>
     </header>
     <main>
         <section id="current-reservations">
@@ -39,10 +50,9 @@
                     </div>
                 </form>
             </div>
-            
-               
+
             <div class="search-results">
-                <p style="font-size: 18px;  margin-bottom: 30px; margin-left: 450px;">¡Estos son los autos que tenemos disponibles para ti!</p>
+                <p style="font-size: 18px;  margin-bottom: 30px; margin-left: 150px;">¡Estos son los autos que tenemos disponibles para ti!</p>
                 <button id="filtroBtn"><img src="Images/filtrar.png"/></button>
                     <div id="opcionesFiltro" class="opcionesFiltro">
                         <form id="filtroForm">
@@ -82,21 +92,15 @@
                         </form>
                     </div>
                     <div class="available_car">
-                        <div class="Cards-cars">
-                            <div class="box">
-                                <div class="box-img">
-                                    <img src="Images/Carro.png"></img>
-                                </div>
-                                <p>2017</p>
-                                <h2>Nombre del carro</h2>
-                                <h2>$10000 <span>/month</span></h2>
-                                <a href="#" class="btn">Ver detalles</a>
-                            </div>
-                        </div>
+                        <!--Div para agregar los carros disponibles-->
                     </div>
                 </div>
         </section>
     </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 LuxuryWheels desarrollado por: msalome.garces@udea.edu.co carolina.jimenez3@udea.edu.co cristian.padron@udea.edu.co</p>
+    </footer>
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
@@ -109,8 +113,11 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.0.1/css/ionicons.min.css">
 
-
     <script src="scriptbuscar.js"></script>
     <script src="script.js"></script>
+    <script src="scriptcarrito.js"></script>
+
+
+    
 </body>
 </html>

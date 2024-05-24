@@ -7,8 +7,7 @@
     <title> Reservar-LuxuryWheels</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
-<body>
+<body> 
     <header class="header">
         <div class="logo">
             <img src="Images/logo.png" alt="Logo de la marca">
@@ -19,18 +18,25 @@
                 <li><a href="#" class="active">Reservar</a></li>
            </ul>
         </nav>
-        <a class="btn" href="#"><ion-icon name="bag-check-outline"></ion-icon></a>
-    </header>
-</body>
-    <body> 
-    <main>
-      
-            <div class="Cards-cars">
-                <div class="box">
-                    <div class="box-img">
-                    <img src="Images/Carro.png"></img>
+        <div class="dropdown">
+            <a class="btn"><ion-icon name="bag-check-outline"></ion-icon></a>
+            <div class="dropdown-content">
+                <div class="cart-items">
+                    <!-- Los elementos del carrito se agregarán aquí -->
                 </div>
-                
+                <div class="cart-total">
+                    <strong>Total:</strong> $<span id="cart-total">0.00</span>
+                </div>
+                <a href="#" class="btn-checkout">Aceptar</a>
+            </div>
+        </div>
+    </header>
+    <div class="container-Cars">
+        <div class="Cards-cars">
+            <div class="box">
+                <div class="box-img">
+                    <img src="Images/Carro.png" alt="Carro"></img>
+                </div>
                 <p>2017</p>
                 <h2>Nombre del carro</h2>
                 <h2>$10000 <span>/month</span></h2>
@@ -40,32 +46,45 @@
         <div class="Cards-cars">
             <div class="box">
                 <div class="box-img">
-                <img src="Images/Carro.png"></img>
+                    <img src="Images/Carro.png" alt="Carro"></img>
+                </div>
+                <p>2017</p>
+                <h2>Nombre del carro</h2>
+                <h2>$10000 <span>/month</span></h2>
+                <a href="#" class="btn">Rent now</a>
             </div>
-            
-            <p>2017</p>
-            <h2>Nombre del carro</h2>
-            <h2>$10000 <span>/month</span></h2>
-            <a href="#" class="btn">Rent now</a>
         </div>
-        </div>
-        
         <div class="Cards-cars">
             <div class="box">
                 <div class="box-img">
-                <img src="Images/Carro.png"></img>
+                    <img src="Images/Carro.png" alt="Carro"></img>
+                </div>
+                <p>2017</p>
+                <h2>Nombre del carro</h2>
+                <h2>$10000 <span>/month</span></h2>
+                <a href="#" class="btn">Rent now</a>
             </div>
-            
-            <p>2017</p>
-            <h3>Nombre del carro</h3>
-            <h2>$10000 <span>/month</span></h2>
-            <a href="#" class="btn">Rent now</a>
         </div>
+        <div class="Cards-cars">
+            <div class="box">
+                <div class="box-img">
+                    <img src="Images/Carro.png" alt="Carro"></img>
+                </div>
+                <p>2017</p>
+                <h2>Nombre del carro</h2>
+                <h2>$10000 <span>/month</span></h2>
+                <a href="#" class="btn">Rent now</a>
+            </div>
         </div>
-    </main>
-</body>
+    </div>
+    <footer class="footer">
+        <p>&copy; 2024 LuxuryWheels desarrollado por: msalome.garces@udea.edu.co carolina.jimenez3@udea.edu.co cristian.padron@udea.edu.co</p>
+    </footer>
+
+    
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.0.1/css/ionicons.min.css">
-    
+    <script src="scriptcarrito.js"></script>
 
+</body>
 </html>

@@ -296,6 +296,26 @@ select{
     grid-gap: 10px;
     }
 
+    .details_buscar{
+        width: 900px;
+        height: 500px;
+        text-align: center;
+        background-color: rgb(245, 245, 245);
+        background-size: cover; /* Para cubrir toda el área del div con la imagen */
+        background-position: center; /* Para centrar la imagen */
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem 0;
+        z-index: 1;
+       position: absolute;
+        max-width: 100%; 
+        display: none;
+        border-radius: 20px;
+        box-shadow: 0 0 10px rgb(0, 0,0,0.3);
+        left: 25%;    
+        bottom: 10%;   
+    }
 /*Barra de navegación*/
 .header{
     position: fixed;
@@ -491,27 +511,27 @@ select{
     font-weight: 600;
     margin: 0.2rem 0 0.5rem;
 }
-.Cards-cars .box .btn {
+.Cards-cars .box .btn,.Cards-cars .box .btn_detalles {
     display: flex;
     justify-content: center;
     background: #01602A;
     color: #fff;
     padding: 10px;
     border-radius: 0.5rem;
+    margin-left: 110px;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-size: 18px;
 }
-.Cards-cars .box .btn:hover{
-    background-color:#299459;   
+
+.Cards-cars .box .btn:hover ,.Cards-cars .box .btn_detalles:hover{
+    background-color:#299459; 
+    cursor: pointer;  
 }
+
 /*------------------FIN DE LAS CARDS DE LOS CARROS---------------------*/
 
 /*-------------------INICIO DE LA VENTANA EMERGENTE---------------------*/
-
-.Ventana-emergente { 
-   
-    position: absolute;
-   
-}
-
 
 .details{
     width: 900px;
@@ -527,70 +547,74 @@ select{
     z-index: 1;
    position: absolute;
     max-width: 100%; 
-    display: block;
+    display: none;
     border-radius: 20px;
     box-shadow: 0 0 10px rgb(0, 0,0,0.3);
    
 }
 .Detalles {
     position: relative;
-    left: 150px;
-    
+    left: 10px; 
+    bottom: 40px;   
 }
-    .car-img img {
+.car-img img {
    
-        width: 50%;
-        height: 100%;
-        padding-top: 25px;
-        margin: 0 auto;
-        display: block;
-        }
-
-    .close-btn{
-            position: relative;
-            left: 52rem;
-            bottom: 21rem;
-            font-size: 1.8rem;
-            background-color: #78de1f;
-            border: none;
-            width: 35px;
-            height: 35px;
-            border-radius: 50%;
-            -webkit-border-radius: 50%;
-            -moz-border-radius: 50%;
-            -ms-border-radius: 50%;
-            -o-border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0.9;
-            
+    width: 50%;
+    height: 100%;
+    padding-top: 25px;
+    margin: 0 auto;
+    display: block;
     }
 
-    .cancel-btn{
-        position: relative;
-        right: 2rem;
-        top: 2rem;
-        font-size: 1rem;
-        background-color:#01602A;
-        border-radius: 10px;
-        padding: 10px;
-        display: flex;
-        top: 400px;
-        right: -350px;
-        color: whitesmoke;
-        
-}
-
-.boton-cancelar .p{
+.close-btn{
     position: relative;
-    top:88px;
-}
-.boton-cancelar{
-    position: absolute;
-    bottom: ;
+    left: 52rem;
+    bottom: 25rem;
+    font-size: 1.8rem;
+    background-color: #78de1f;
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.9;
+    
 }
 
+.close-btn,.reservar{
+    cursor: pointer;
+}
+
+.cancel-btn, .reservar{
+    background-color:#01602A;
+    border-radius: 10px;
+    padding: 10px;
+    color: whitesmoke;
+    display: flex;
+    font-weight: bold;
+    padding-left:40px ;
+    padding-right:40px ;
+    font-size: 18px;
+}
+.boton-cancelar, .boton-reservar{
+    position: relative;
+    top: 400px;
+    right: -350px;
+}
+.boton-cancelar p, boton-reservar p{
+ margin-top:5px;
+}
+
+.cancel-btn:hover, .reservar:hover{
+    background-color:#1fb25e;
+    cursor: pointer;
+}
 
 
 /*------------------FIN DE LA VENTANA EMERGENTE---------------------*/

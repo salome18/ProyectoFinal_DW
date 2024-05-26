@@ -6,6 +6,7 @@
     <link rel="icon" type="image/png" href="Images/logo.png">
     <title> Buscar-LuxuryWheels</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header class="header">
@@ -100,7 +101,7 @@
                                 <p>2017</p>
                                 <h2>Nombre del carro</h2>
                                 <h2>$10000 <span>/month</span></h2>
-                                <a href="#" class="btn">Ver detalles</a>
+                                <button class="btn_detalles" onclick="emergente()">Ver detalles</button>
                             </div>
                         </div>
                         <div class="Cards-cars">
@@ -111,7 +112,7 @@
                                 <p>2017</p>
                                 <h2>Nombre del carro</h2>
                                 <h2>$10000 <span>/month</span></h2>
-                                <a href="#" class="btn">Ver detalles</a>
+                                <button class="btn_detalles" onclick="emergente()">Ver detalles</button>
                             </div>
                         </div>
                         <div class="Cards-cars">
@@ -122,11 +123,39 @@
                                 <p>2017</p>
                                 <h2>Nombre del carro</h2>
                                 <h2>$10000 <span>/month</span></h2>
-                                <a href="#" class="btn">Ver detalles</a>
+                                <button class="btn_detalles" onclick="emergente()">Ver detalles</button>
                             </div>
                         </div>
                     </div>
                 </div>
+
+
+                <div class="details_buscar" id="informacion_buscar">
+                    <!---Botón para cancelar-->
+                    <div class="boton-reservar">
+                       <button type = "button" class = "reservar" id = "reservar_btn">
+                        Reservar
+                       </button>
+                    </div>
+           
+           
+                       <div class="Detalles">
+                           <h2 class="Car-name">Nombre del auto</h2>
+                           <h3>Detalles:</h3>
+                           <p class="marca">Marca del auto</p>
+                           <p class="combustible">tipo de combustible</p>
+                           <p class="transimisión">transimisión</p>
+                           <div class="car-img">
+                               <img src="Images/Carro.png">
+                           </div>
+                       </div>
+           
+                       <!---Botón para cerrar-->
+                       <button type = "button" class = "btn close-btn" id = "close-btn">
+                           <i class="fas fa-times"></i>
+                       </button>
+               </div>
+
         </section>
     </main>
 

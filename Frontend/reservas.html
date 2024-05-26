@@ -41,7 +41,7 @@
                 <p>2017</p>
                 <h2>Nombre del carro</h2>
                 <h2>$10000 <span>/month</span></h2>
-                <a href="#" class="btn">Rent now</a>
+                <button class="btn" onclick="emergente()">Ver reserva</button>
             </div>
         </div>
         <div class="Cards-cars">
@@ -52,7 +52,7 @@
                 <p>2017</p>
                 <h2>Nombre del carro</h2>
                 <h2>$10000 <span>/month</span></h2>
-                <a href="#" class="btn">Rent now</a>
+                <button class="btn" onclick="emergente()">Ver reserva</button>
             </div>
         </div>
         <div class="Cards-cars">
@@ -63,7 +63,7 @@
                 <p>2017</p>
                 <h2>Nombre del carro</h2>
                 <h2>$10000 <span>/month</span></h2>
-                <a href="#" class="btn">Rent now</a>
+                <button class="btn" onclick="emergente()">Ver reserva</button>
             </div>
         </div>
         <div class="Cards-cars">
@@ -74,41 +74,37 @@
                 <p>2017</p>
                 <h2>Nombre del carro</h2>
                 <h2>$10000 <span>/month</span></h2>
-                <a href="#" class="btn">Rent now</a>
+                <button class="btn" onclick="emergente()">Ver reserva</button>
             </div>
         </div>
     </div>
 
       <!---Ventana emergente-->
-        <div class="details">
-        
+    <div class="details" id="informacion">
          <!---Botón para cancelar-->
          <div class="boton-cancelar">
-         <button type = "button" class = "btn cancel-btn" id = "cancel-btn">
-            <ion-icon name="trash-outline"></ion-icon>
-            <p>Cancelar Reserva</p>
-        </button>
+            <button type = "button" class = "btn cancel-btn" id = "cancel-btn">
+                <ion-icon name="trash-outline"></ion-icon>
+                <p>Cancelar Reserva</p>
+            </button>
          </div>
-      <div class="Ventana-emergente">
-       
-       
-        <div class="Detalles">
-            <h2 class="Car-name">Nombre del auto</h2>
-            <h3>Detalles:</h3>
-            <p class="marca">Marca del auto</p>
-            <p class="combustible">tipo de combustible</p>
-            <p class="transimisión">transimisión</p>
-            <div class="car-img">
-                <img src="Images/Carro.png">
-            </div>
-        </div>
-        
 
-        <!---Botón para cerrar-->
-        <button type = "button" class = "btn close-btn" id = "close-btn">
-            <i class="fas fa-times"></i>
-        </button>
-        </div>
+
+            <div class="Detalles">
+                <h2 class="Car-name">Nombre del auto</h2>
+                <h3>Detalles:</h3>
+                <p class="marca">Marca del auto</p>
+                <p class="combustible">tipo de combustible</p>
+                <p class="transimisión">transimisión</p>
+                <div class="car-img">
+                    <img src="Images/Carro.png">
+                </div>
+            </div>
+
+            <!---Botón para cerrar-->
+            <button type = "button" class = "btn close-btn" id = "close-btn">
+                <i class="fas fa-times"></i>
+            </button>
     </div>
     <footer class="footer">
         <p>&copy; 2024 LuxuryWheels desarrollado por: msalome.garces@udea.edu.co carolina.jimenez3@udea.edu.co cristian.padron@udea.edu.co</p>
@@ -118,6 +114,7 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.0.1/css/ionicons.min.css">
     <script src="scriptcarrito.js"></script>
+    <script src="scriptreservas.js"></script>
 
 </body>
 </html>

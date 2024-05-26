@@ -57,4 +57,12 @@ document.getElementById('search-form').addEventListener('submit', function(event
         });*/
 });
 
+const recipeCloseBtn = document.getElementById('close-btn');
 
+recipeCloseBtn.addEventListener('click', () => {
+    document.getElementById("informacion_buscar").style.display="none";
+});
+
+function emergente() {
+    document.getElementById('informacion_buscar').style.display = "block";
+ }

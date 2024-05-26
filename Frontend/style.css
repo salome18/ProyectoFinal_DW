@@ -487,7 +487,72 @@ select{
     padding: 10px;
     border-radius: 0.5rem;
 }
-/*-------------------FIN DE LAS CARDS DE LOS CARROS---------------------*/
+/*------------------FIN DE LAS CARDS DE LOS CARROS---------------------*/
+
+/*-------------------INICIO DE LA VENTANA EMERGENTE---------------------*/
+.details{
+    width: 900px;
+    height: 500px;
+    text-align: center;
+    background-color: #01602A;
+    background-size: cover; /* Para cubrir toda el área del div con la imagen */
+    background-position: center; /* Para centrar la imagen */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+    z-index: 1;
+   position: absolute;
+    max-width: 100%; 
+    display: none;
+}
+
+    .car-img img {
+   
+        width: 50%;
+        height: 100%;
+        padding-top: 25px;
+        margin: 0 auto;
+        display: block;
+        }
+
+    .close-btn{
+            position: absolute;
+            right: 2rem;
+            top: 2rem;
+            font-size: 1.8rem;
+            background-color: #f1d2a7;
+            border: none;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0.9;
+    }
+
+    .cancel-btn{
+        position: center;
+        right: 2rem;
+        top: 2rem;
+        font-size: 1rem;
+        background-color: #f1d2a7;
+        border-radius: 2%;
+       
+
+
+    }
+
+
+
+
+/*------------------FIN DE LA VENTANA EMERGENTE---------------------*/
+
 
 /* Estilos para el footer */
 .footer {

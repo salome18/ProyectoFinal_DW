@@ -186,11 +186,11 @@ body{
 
 .opcionesFiltro {
     display: none;
-    position: fixed;
-    top: 65%;
-    left: 38%;
+    position: absolute;
+    top: 60%;
+    left: 86%;
     transform: translate(-50%, -50%);
-    background-color: rgb(240, 238, 238);
+    background-color: rgb(252, 252, 252);
     padding: 20px;
     border: 1px solid #dbd9d9;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -205,11 +205,13 @@ body{
 }
 
 .searchcar{
-    border:1px solid rgba(26, 26, 26, 0.251);
+    position: absolute;
+    top: 200px;
+    left: 25%;
+    border:1px solid rgba(26, 26, 26, 0.18);
     padding: 40px;
     border-radius: 20px;
-    display: block;
-    background-color: rgba(245, 245, 245, 0.244);
+    background-color: rgba(245, 245, 245, 0.347);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.135)
 }
 
@@ -256,7 +258,9 @@ select{
 
 .search-results{
     display: none;
-    margin-top: 30px;
+    margin-top: 400px; 
+    justify-content: space-between;
+    align-items: center;
     padding: 30px
 }
 
@@ -274,16 +278,23 @@ select{
 }
 
 #filtroBtn img{
-    height: 30px;
-    width: 30px;
+    height: 32px;
+    width: 32px;
 }
 
 #filtroBtn{
     cursor: pointer;  
     border-radius: 6px;
-    border:1px solid rgba(0, 0, 0, 0.112);
+    border:0px solid rgba(0, 0, 0, 0);
     padding: 5px;
+    margin-left: 1150px;
 }
+
+.available_car{
+    display: grid;
+    grid-template-columns: repeat(3,  1fr);
+    grid-gap: 10px;
+    }
 
 /*Barra de navegación*/
 .header{
@@ -296,6 +307,7 @@ select{
     align-items: center;
     height: 85px;
     padding: 5px 10%;
+    z-index: 1000;
 }
 
 .header .logo{
@@ -486,6 +498,9 @@ select{
     color: #fff;
     padding: 10px;
     border-radius: 0.5rem;
+}
+.Cards-cars .box .btn:hover{
+    background-color:#299459;   
 }
 /*------------------FIN DE LAS CARDS DE LOS CARROS---------------------*/
 

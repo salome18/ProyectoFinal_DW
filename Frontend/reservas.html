@@ -81,26 +81,33 @@
 
       <!---Ventana emergente-->
         <div class="details">
-        <!---Botón para cerrar-->
-        <button type = "button" class = "btn close-btn" id = "close-btn">
-            <i class="fas fa-times"></i>
-        </button>
+        
          <!---Botón para cancelar-->
+         <div class="boton-cancelar">
          <button type = "button" class = "btn cancel-btn" id = "cancel-btn">
-            <i class="fa-solid fa-trash-can"> Cancelar reserva</i>
+            <ion-icon name="trash-outline"></ion-icon>
+            <p>Cancelar Reserva</p>
         </button>
+         </div>
       <div class="Ventana-emergente">
-        <h2 class="Car-name">Nombre del auto</h2>
+       
        
         <div class="Detalles">
+            <h2 class="Car-name">Nombre del auto</h2>
             <h3>Detalles:</h3>
             <p class="marca">Marca del auto</p>
             <p class="combustible">tipo de combustible</p>
             <p class="transimisión">transimisión</p>
+            <div class="car-img">
+                <img src="Images/Carro.png">
+            </div>
         </div>
-        <div class="car-img">
-            <img src="Images/Carro.png">
-        </div>
+        
+
+        <!---Botón para cerrar-->
+        <button type = "button" class = "btn close-btn" id = "close-btn">
+            <i class="fas fa-times"></i>
+        </button>
         </div>
     </div>
     <footer class="footer">

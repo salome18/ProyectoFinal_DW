@@ -53,7 +53,7 @@
             </div>
 
             <div class="search-results">
-                <p style="font-size: 18px;  margin-bottom: 30px; margin-left: 500px">¡Estos son los autos que tenemos disponibles para ti!</p>
+                <p style="font-size: 18px;  margin-bottom: 30px; margin-left: 400px">¡Estos son los autos que tenemos disponibles para ti!</p>
                 <button id="filtroBtn"><img src="Images/filtrar.png"/></button>
                     <div id="opcionesFiltro" class="opcionesFiltro">
                         <form id="filtroForm">
@@ -100,30 +100,8 @@
                                 </div>
                                 <p>2017</p>
                                 <h2>Nombre del carro</h2>
-                                <h2>$10000 <span>/month</span></h2>
-                                <button class="btn_detalles" onclick="emergente()">Ver detalles</button>
-                            </div>
-                        </div>
-                        <div class="Cards-cars">
-                            <div class="box">
-                                <div class="box-img">
-                                    <img src="Images/Carro.png"></img>
-                                </div>
-                                <p>2017</p>
-                                <h2>Nombre del carro</h2>
-                                <h2>$10000 <span>/month</span></h2>
-                                <button class="btn_detalles" onclick="emergente()">Ver detalles</button>
-                            </div>
-                        </div>
-                        <div class="Cards-cars">
-                            <div class="box">
-                                <div class="box-img">
-                                    <img src="Images/Carro.png"></img>
-                                </div>
-                                <p>2017</p>
-                                <h2>Nombre del carro</h2>
-                                <h2>$10000 <span>/month</span></h2>
-                                <button class="btn_detalles" onclick="emergente()">Ver detalles</button>
+                                <h3>$10000</h3>
+                                <button class="btn_detalles">Ver detalles</button>
                             </div>
                         </div>
                     </div>
@@ -131,7 +109,6 @@
 
 
                 <div class="details_buscar" id="informacion_buscar">
-                    <!---Botón para cancelar-->
                     <div class="boton-reservar">
                        <button type = "button" class = "reservar" id = "reservar_btn">
                         Reservar
@@ -141,10 +118,11 @@
            
                        <div class="Detalles">
                            <h2 class="Car-name">Nombre del auto</h2>
-                           <h3>Detalles:</h3>
-                           <p class="marca">Marca del auto</p>
-                           <p class="combustible">tipo de combustible</p>
-                           <p class="transimisión">transimisión</p>
+                           <span>Marca: </span><p class="marca"></p><br>
+                           <span>Modelo: </span><p class="modelo">2017</p><br>
+                           <span>Combustible: </span><p class="combustible">Combustible</p><br>
+                           <span>Transmisión: </span><p class="transmision">Transimisión</p><br>
+                           <span>Carrocería: </span><p class="carroceria">Carroceria</p>
                            <div class="car-img">
                                <img src="Images/Carro.png">
                            </div>
@@ -175,7 +153,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.0.1/css/ionicons.min.css">
 
     <script src="scriptbuscar.js"></script>
-    <script src="script.js"></script>
     <script src="scriptcarrito.js"></script>
 
 

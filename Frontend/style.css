@@ -187,8 +187,8 @@ body{
 .opcionesFiltro {
     display: none;
     position: absolute;
-    top: 60%;
-    left: 86%;
+    top: 600px;
+    left: 1240px;
     transform: translate(-50%, -50%);
     background-color: rgb(252, 252, 252);
     padding: 20px;
@@ -292,8 +292,9 @@ select{
 
 .available_car{
     display: grid;
-    grid-template-columns: repeat(3,  1fr);
-    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    gap:1rem;
+    margin-top: 2rem;
     }
 
     .details_buscar{
@@ -308,7 +309,7 @@ select{
         justify-content: center;
         padding: 2rem 0;
         z-index: 1;
-       position: absolute;
+       position: fixed;
         max-width: 100%; 
         display: none;
         border-radius: 20px;
@@ -532,7 +533,10 @@ select{
 /*------------------FIN DE LAS CARDS DE LOS CARROS---------------------*/
 
 /*-------------------INICIO DE LA VENTANA EMERGENTE---------------------*/
-
+.Detalles p{
+    display: inline-block; /* Mostrar como elementos en línea-block */
+    margin-right: 5px; /* Ajustar el espacio entre los elementos */
+}
 .details{
     width: 900px;
     height: 500px;
@@ -559,16 +563,14 @@ select{
 }
 .car-img img {
    
-    width: 50%;
-    height: 100%;
-    padding-top: 25px;
+    width: 45%;
+    height: 50%;
     margin: 0 auto;
     display: block;
     }
 
 .close-btn{
     position: relative;
-<<<<<<< HEAD
     left: 52rem;
     bottom: 25rem;
     font-size: 1.8rem;
@@ -586,12 +588,6 @@ select{
     justify-content: center;
     opacity: 0.9;
     
-=======
-    top:88px;
-}
-.boton-cancelar{
-    position: absolute;
->>>>>>> fd7ff4109d3c20762569f43f458511fea7654a57
 }
 
 .close-btn,.reservar{
@@ -611,7 +607,7 @@ select{
 }
 .boton-cancelar, .boton-reservar{
     position: relative;
-    top: 400px;
+    top: 415px;
     right: -350px;
 }
 .boton-cancelar p, boton-reservar p{

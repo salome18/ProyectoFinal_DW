@@ -26,7 +26,7 @@ var cars = []Car{
 	{"BMW X6 2024", "BMW", "Híbrido", "Automática", "SUV", 2024, 850000, "/Backend/Autos/BMW X6 2024.png"},
 	{"BMW X3 2024", "BMW", "Eléctrico", "Automática", "SUV", 2024, 750000, "/Backend/Autos/BMW X3 2024.png"},
 	{"BMW i5 2024", "BMW", "Eléctrico", "Automática", "Sedán", 2024, 800000, "/Backend/Autos/BMW i5 2024.png"},
-	{"BMW M440i Convertible", "BMW", "Gasolina", "Automática", "Convertible", 2022, 700000, "/Backend/Autos/BMW M440i Convertible.png"},
+	{"BMW M440i Convertible", "BMW", "Gasolina", "Automática", "Sedán", 2022, 700000, "/Backend/Autos/BMW M440i Convertible.png"},
 	{"Mazda Sedan 2", "Mazda", "Gasolina", "Manual", "Sedán", 2012, 150000, "/Backend/Autos/Mazda Sedan 2.png"},
 	{"Mazda CX-90 Híbrida", "Mazda", "Híbrido", "Automática", "SUV", 2024, 700000, "/Backend/Autos/Mazda CX-90 híbrida.png"},
 	{"Mazda MX-30 Eléctrico", "Mazda", "Eléctrico", "Automática", "SUV", 2024, 650000, "/Backend/Autos/Mazda MX-30 eléctrico.png"},
@@ -45,12 +45,28 @@ var cars = []Car{
 }
 
 func getCars(w http.ResponseWriter, r *http.Request) {
-    w.Header().Set("Content-Type", "application/json")
-    w.Header().Set("Access-Control-Allow-Origin", "*") // Permitir solicitudes desde cualquier origen
-    json.NewEncoder(w).Encode(cars)
+	marca := r.URL.Query().Get("marca")
+	combustible := r.URL.Query().Get("combustible")
+	transmision := r.URL.Query().Get("transmision")
+	carroceria := r.URL.Query().Get("carroceria")
+
+	filteredCars := []Car{}
+
+	for _, car := range cars {
+		if (marca == "" || car.Marca == marca) &&
+			(combustible == "" || car.Combustible == combustible) &&
+			(transmision == "" || car.Transmision == transmision) &&
+			(carroceria == "" || car.Carroceria == carroceria) {
+			filteredCars = append(filteredCars, car)
+		}
+	}
+
+	w.Header().Set("Content-Type", "application/json")
+	w.Header().Set("Access-Control-Allow-Origin", "*") // Permitir solicitudes desde cualquier origen
+	json.NewEncoder(w).Encode(filteredCars)
 }
 
 func main() {
-    http.HandleFunc("/cars", getCars)
-    http.ListenAndServe(":8080", nil)
+	http.HandleFunc("/cars", getCars)
+	http.ListenAndServe(":8080", nil)
 }

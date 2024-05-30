@@ -292,7 +292,7 @@ select{
 
 .available_car{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    grid-template-columns: repeat(3, 400px);
     gap:1rem;
     margin-top: 2rem;
     }
@@ -466,17 +466,18 @@ select{
 
 /*-------------------INICIO DE LAS CARDS DE LOS CARROS---------------------*/
 .container-Cars {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 400px);
+    gap:1rem;
     margin-top: 100px;
     margin-bottom: 20px;
 }
 .Cards-cars{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    grid-template-columns:  repeat(3, 400px);
     gap:1rem;
     margin-top: 2rem;
-    padding-left: 70px;
+    padding-left: 20px;
 }
 .Cards-cars .box{
     padding: 10px;

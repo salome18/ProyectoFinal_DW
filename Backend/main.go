@@ -3,6 +3,14 @@ package main
 import (
 	"encoding/json"
 	"net/http"
+	"os"
+	"fmt"
+	"log"
+
+	"github.com/gorilla/mux"
+	"github.com/jmoiron/sqlx"
+	"github.com/joho/godotenv"
+	_ "github.com/lib/pq"
 )
 
 type Car struct {
@@ -66,7 +74,42 @@ func getCars(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(filteredCars)
 }
 
+// función base de datos 
+func ConectarDB() (*sqlx.DB, error) {
+	url := fmt.Sprintf("postgres://%s:%s@%s:%s/%s?sslmode=disable",
+		os.Getenv("DB_USER"), os.Getenv("DB_PASSWORD"), os.Getenv("DB_HOST"),
+		os.Getenv("DB_PORT"), os.Getenv("DB_NAME"))
+	db, err := sqlx.Connect("postgres", url)
+	if err != nil {
+		log.Printf("fallo la conexion a PostgreSQL, error: %s", err.Error())
+		return nil, err
+	}
+	log.Printf("Nos conectamos bien a la base de datos db: %#v", db)
+	return db, nil
+}
+
 func main() {
+	// Cargar variables de entorno desde el archivo .env
+	err := godotenv.Load()
+	if err != nil {
+		log.Fatalf("Error cargando el archivo .env: %v", err)
+	}
+
+	db, err := ConectarDB()
+	if err != nil {
+		log.Fatalln("error conectando a la base de datos", err.Error())
+		return
+	}
+
+	repo := repository.NewRepository(db)
+	handler := handlers.NewHandler(repo)
+
+	r := mux.NewRouter()
+	r.HandleFunc("/usuarios", handler.GetUsuarios).Methods("GET")
+	r.HandleFunc("/usuarios", handler.CreateUsuario).Methods("POST")
+	// Agregar rutas para Autos y Reservas
+	
 	http.HandleFunc("/cars", getCars)
 	http.ListenAndServe(":8080", nil)
+	log.Fatal(http.ListenAndServe(":8080", r))
 }

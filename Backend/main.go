@@ -3,8 +3,11 @@ package main
 import (
 	"encoding/json"
 	"net/http"
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 =======
+=======
+>>>>>>> f683c9db3360a34f9e20f5d15f04d1931c6422ac
 	"os"
 	"fmt"
 	"log"
@@ -13,9 +16,12 @@ import (
 	"github.com/jmoiron/sqlx"
 	"github.com/joho/godotenv"
 	_ "github.com/lib/pq"
+<<<<<<< HEAD
 	"github.com/salome18/ProyectoFinal_DW/Backend/handlers"
 	"github.com/salome18/ProyectoFinal_DW/Backend/repository"
 >>>>>>> Stashed changes
+=======
+>>>>>>> f683c9db3360a34f9e20f5d15f04d1931c6422ac
 )
 
 type Car struct {
@@ -79,9 +85,26 @@ func getCars(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(filteredCars)
 }
 
+// función base de datos 
+func ConectarDB() (*sqlx.DB, error) {
+	url := fmt.Sprintf("postgres://%s:%s@%s:%s/%s?sslmode=disable",
+		os.Getenv("DB_USER"), os.Getenv("DB_PASSWORD"), os.Getenv("DB_HOST"),
+		os.Getenv("DB_PORT"), os.Getenv("DB_NAME"))
+	db, err := sqlx.Connect("postgres", url)
+	if err != nil {
+		log.Printf("fallo la conexion a PostgreSQL, error: %s", err.Error())
+		return nil, err
+	}
+	log.Printf("Nos conectamos bien a la base de datos db: %#v", db)
+	return db, nil
+}
+
 func main() {
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 =======
+=======
+>>>>>>> f683c9db3360a34f9e20f5d15f04d1931c6422ac
 	// Cargar variables de entorno desde el archivo .env
 	err := godotenv.Load()
 	if err != nil {
@@ -101,8 +124,13 @@ func main() {
 	r.HandleFunc("/usuarios", handler.GetUsuarios).Methods("GET")
 	r.HandleFunc("/usuarios", handler.CreateUsuario).Methods("POST")
 	// Agregar rutas para Autos y Reservas
+<<<<<<< HEAD
 
 >>>>>>> Stashed changes
+=======
+	
+>>>>>>> f683c9db3360a34f9e20f5d15f04d1931c6422ac
 	http.HandleFunc("/cars", getCars)
 	http.ListenAndServe(":8080", nil)
+	log.Fatal(http.ListenAndServe(":8080", r))
 }

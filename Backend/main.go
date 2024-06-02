@@ -3,6 +3,19 @@ package main
 import (
 	"encoding/json"
 	"net/http"
+<<<<<<< Updated upstream
+=======
+	"os"
+	"fmt"
+	"log"
+
+	"github.com/gorilla/mux"
+	"github.com/jmoiron/sqlx"
+	"github.com/joho/godotenv"
+	_ "github.com/lib/pq"
+	"github.com/salome18/ProyectoFinal_DW/Backend/handlers"
+	"github.com/salome18/ProyectoFinal_DW/Backend/repository"
+>>>>>>> Stashed changes
 )
 
 type Car struct {
@@ -67,6 +80,29 @@ func getCars(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
+<<<<<<< Updated upstream
+=======
+	// Cargar variables de entorno desde el archivo .env
+	err := godotenv.Load()
+	if err != nil {
+		log.Fatalf("Error cargando el archivo .env: %v", err)
+	}
+
+	db, err := ConectarDB()
+	if err != nil {
+		log.Fatalln("error conectando a la base de datos", err.Error())
+		return
+	}
+
+	repo := repository.NewRepository(db)
+	handler := handlers.NewHandler(repo)
+
+	r := mux.NewRouter()
+	r.HandleFunc("/usuarios", handler.GetUsuarios).Methods("GET")
+	r.HandleFunc("/usuarios", handler.CreateUsuario).Methods("POST")
+	// Agregar rutas para Autos y Reservas
+
+>>>>>>> Stashed changes
 	http.HandleFunc("/cars", getCars)
 	http.ListenAndServe(":8080", nil)
 }

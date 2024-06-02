@@ -3,13 +3,10 @@ package handlers
 import (
 	"encoding/json"
 	"net/http"
-<<<<<<< HEAD
+	
 	"github.com/salome18/ProyectoFinal_DW/Backend/models"
 	"github.com/salome18/ProyectoFinal_DW/Backend/repository"
-=======
-	"proyecto-final/models"
-	"proyecto-final/repository"
->>>>>>> f683c9db3360a34f9e20f5d15f04d1931c6422ac
+
 )
 
 type Handler struct {

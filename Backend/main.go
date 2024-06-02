@@ -3,11 +3,6 @@ package main
 import (
 	"encoding/json"
 	"net/http"
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> f683c9db3360a34f9e20f5d15f04d1931c6422ac
 	"os"
 	"fmt"
 	"log"
@@ -16,12 +11,10 @@ import (
 	"github.com/jmoiron/sqlx"
 	"github.com/joho/godotenv"
 	_ "github.com/lib/pq"
-<<<<<<< HEAD
+
 	"github.com/salome18/ProyectoFinal_DW/Backend/handlers"
 	"github.com/salome18/ProyectoFinal_DW/Backend/repository"
->>>>>>> Stashed changes
-=======
->>>>>>> f683c9db3360a34f9e20f5d15f04d1931c6422ac
+
 )
 
 type Car struct {
@@ -100,11 +93,6 @@ func ConectarDB() (*sqlx.DB, error) {
 }
 
 func main() {
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> f683c9db3360a34f9e20f5d15f04d1931c6422ac
 	// Cargar variables de entorno desde el archivo .env
 	err := godotenv.Load()
 	if err != nil {
@@ -124,12 +112,7 @@ func main() {
 	r.HandleFunc("/usuarios", handler.GetUsuarios).Methods("GET")
 	r.HandleFunc("/usuarios", handler.CreateUsuario).Methods("POST")
 	// Agregar rutas para Autos y Reservas
-<<<<<<< HEAD
 
->>>>>>> Stashed changes
-=======
-	
->>>>>>> f683c9db3360a34f9e20f5d15f04d1931c6422ac
 	http.HandleFunc("/cars", getCars)
 	http.ListenAndServe(":8080", nil)
 	log.Fatal(http.ListenAndServe(":8080", r))

@@ -62,10 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 return response.json();
             })
             .then(data => {
-                if (!Array.isArray(data)) {
-                    throw new Error('Received data is not an array');
-                }
-
+                
                 // Obtener el contenedor de los autos
                 const carsContainer = document.querySelector('.Cards-cars');
 
@@ -127,8 +124,8 @@ document.addEventListener('DOMContentLoaded', function() {
             })
             .catch(error => {
                 console.error('Error al obtener la información de los autos:', error);
-                const carsContainer = document.querySelector('.Cards-cars');
-                carsContainer.innerHTML = "<p>Error al obtener la información de los autos.</p>";
+                const carsContainer = document.querySelector('.search-results');
+                carsContainer.innerHTML = "<p>Lo sentimos, ninguno de nuestros autos cumple con los filtros ingresados. Por favor intenta de nuevo.</p>";
             });
     }
 
@@ -167,5 +164,6 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelector('.transmision').textContent = data.transmision;
         document.querySelector('.carroceria').textContent = data.carroceria;
         document.querySelector('.car-img img').src = data.imagen;
+        document.querySelector('.precio').textContent=data.precio_por_dia;
     }
 });

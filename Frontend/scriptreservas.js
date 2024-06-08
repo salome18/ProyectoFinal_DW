@@ -7,3 +7,4 @@ recipeCloseBtn.addEventListener('click', () => {
 function emergente() {
     document.getElementById('informacion').style.display = "block";
  }
+ 

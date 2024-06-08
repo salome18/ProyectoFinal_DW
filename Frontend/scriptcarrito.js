@@ -29,10 +29,22 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Simulación de agregar un artículo (ejemplo)
-    addToCart({ imgSrc: 'Images/Carro.png', name: 'Nombre del carro', price: 10000 });
-    addToCart({ imgSrc: 'Images/Carro.png', name: 'Nombre del carro', price: 50000 });
-    addToCart({ imgSrc: 'Images/Carro.png', name: 'Nombre del carro', price: 50000 });
+    
 
-    // Puedes llamar a addToCart con los datos reales del artículo cuando el usuario añada algo al carrito.
+    // Escuchar el evento click en el botón "Reservar"
+    const reservarBtn = document.getElementById('reservar_btn');
+    reservarBtn.addEventListener('click', () => {
+
+        const carNameElement = document.querySelector('.Detalles .Car-name');
+        const carImgElement = document.querySelector('.Detalles .car-img img');
+        const carPriceElement= document.querySelector('.Detalles .precio');
+        const price = parseFloat(carPriceElement.textContent);
+        
+        const selectedCar = {
+            imgSrc: carImgElement.src, 
+            name: carNameElement.textContent,
+            price: price                
+        };
+        addToCart(selectedCar);
+    });
 });
